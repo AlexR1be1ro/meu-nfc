@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
@@ -12,42 +13,114 @@
 
 <style>
 
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
 * {
     box-sizing: border-box;
 }
 
 body {
+
     margin: 0;
+
     min-height: 100vh;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     font-family: Arial, sans-serif;
 
-    background: linear-gradient(135deg, #25d366, #128c7e);
+    background: linear-gradient(
+        135deg,
+        #25d366,
+        #128c7e
+    );
+
+    position: relative;
+
 }
 
+
+/* =========================
+   LOGO DPG
+========================= */
+
+.logo-dpg {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 20px;
+
+    width: 115px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    z-index: 10;
+
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
 .container {
+
     width: 90%;
+
     max-width: 400px;
 
     text-align: center;
+
+    padding-top: 70px;
+
 }
+
+
+/* =========================
+   TÍTULO
+========================= */
 
 h1 {
+
     font-size: 48px;
+
+    line-height: 1.05;
+
     color: #DCF8C6;
 
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
+
 }
 
+
+/* =========================
+   SUBTÍTULO
+========================= */
+
 .subtitulo {
+
     color: white;
+
     font-size: 25px;
-    margin-bottom: 30px;
+
+    margin: 0 0 30px 0;
+
 }
+
+
+/* =========================
+   BOTÕES
+========================= */
 
 .botao {
 
@@ -62,8 +135,11 @@ h1 {
     width: 50%;
 
     height: 170px;
+
     margin-left: auto;
+
     margin-right: auto;
+
     margin-bottom: 40px;
 
     background: #DCF8C6;
@@ -76,12 +152,19 @@ h1 {
         0 5px 20px rgba(0,0,0,0.12);
 
     transition: 0.2s;
+
 }
 
 .botao:hover {
 
     transform: scale(1.03);
+
 }
+
+
+/* =========================
+   ÍCONES
+========================= */
 
 .logo {
 
@@ -90,7 +173,13 @@ h1 {
     height: 100px;
 
     margin-bottom: 15px;
+
 }
+
+
+/* =========================
+   TEXTO DOS BOTÕES
+========================= */
 
 .clique {
 
@@ -99,16 +188,102 @@ h1 {
     font-weight: bold;
 
     color: #333;
+
 }
+
+
+/* =========================
+   CORES DOS ÍCONES
+========================= */
 
 .whatsapp .logo {
 
     fill: #25D366;
+
 }
 
 .instagram .logo {
 
     fill: #E1306C;
+
+}
+
+
+/* =========================
+   AJUSTE PARA CELULAR
+========================= */
+
+@media (max-width: 500px) {
+
+    .logo-dpg {
+
+        width: 105px;
+
+        top: 20px;
+
+        right: 15px;
+
+    }
+
+    .container {
+
+        padding-top: 75px;
+
+    }
+
+    h1 {
+
+        font-size: 46px;
+
+    }
+
+    .subtitulo {
+
+        font-size: 24px;
+
+    }
+
+    .botao {
+
+        width: 50%;
+
+        height: 170px;
+
+    }
+
+}
+
+
+/* =========================
+   CELULARES MUITO PEQUENOS
+========================= */
+
+@media (max-width: 360px) {
+
+    .logo-dpg {
+
+        width: 90px;
+
+    }
+
+    h1 {
+
+        font-size: 40px;
+
+    }
+
+    .subtitulo {
+
+        font-size: 21px;
+
+    }
+
+    .botao {
+
+        width: 60%;
+
+    }
+
 }
 
 </style>
@@ -118,16 +293,34 @@ h1 {
 
 <body>
 
+
+<!-- =========================
+     LOGO DPG
+========================= -->
+
+<img
+    src="dpg.png"
+    alt="DPG"
+    class="logo-dpg"
+>
+
+
 <div class="container">
 
-    <h1>Entre em contato</h1>
+
+    <h1>
+        Entre em contato
+    </h1>
+
 
     <p class="subtitulo">
         Escolha uma opção abaixo
     </p>
 
 
-    <!-- WHATSAPP -->
+    <!-- =========================
+         WHATSAPP
+    ========================= -->
 
     <a
         class="botao whatsapp"
@@ -152,7 +345,9 @@ h1 {
     </a>
 
 
-    <!-- INSTAGRAM -->
+    <!-- =========================
+         INSTAGRAM
+    ========================= -->
 
     <a
         class="botao instagram"
@@ -176,7 +371,9 @@ h1 {
 
     </a>
 
+
 </div>
+
 
 </body>
 
